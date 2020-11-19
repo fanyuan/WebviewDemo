@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+     <!--<head>-->
+	       <!--<meta charset="utf-8" />-->
+		   <!--<title>html中<button>按钮标签详细介绍</title>-->
+	 <!--</head>-->
+	 <body bgcolor="burlywood" align="center">
+	         <br><br>
+	         <button type="button" onClick="test1()">测试一</button><br><br>
+	         <button type="button" onclick="test2()">测试二</button><br><br>
+			 <button type="button" onClick="test4()">测试四</button><br><br>
+			 <button type="button" onClick="test3()">测试三</button>
+	         <!--<button type="button" onClick="window.javascriptCallback.test1('js带参')">云闪付</button>-->
+
+	 </body>
+	 <script type="text/javascript">
+	           function clickme(){
+		          var str = "js参数测试";
+		          window.javascriptCallback.test1(str)
+        	   }
+        	   function alertMsg(data){
+		          alert("来自网页的消息：" + data);
+                  <!--window.location.href = "qmfpppay://www.baidu.com";-->
+        	   }
+
+        	   function test1(){
+        	      var parm = "test1";
+		          var v = window.javascriptCallback.test1(parm)
+		          alert( v );
+        	   }
+        	   function test2(){
+        	      var parm = "test2";
+		          window.javascriptCallback.test2(parm)
+        	   }
+        	   function test4(){
+        	      var parm = "test4";;
+		          window.javascriptCallback.test4(parm)
+        	   }
+        	   function test3(){
+        	      var parm = "test3";
+		          window.javascriptCallback.test3(parm)
+        	   }
+     </script>
+</html>
